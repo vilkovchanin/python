@@ -1,13 +1,10 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches:
-      - master
+    branches: [ main ]
 #  pull_request:
 #    branches: [ main ]
 
@@ -27,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Run a one-line script (mutli)
         run: |
           echo Hello, world!,
           echo uptime, utime, uname -a.
